@@ -1,5 +1,5 @@
 ## Description
-'merge.py' is a script to merge multiple pdf files into one. It can merge password protected pdf files also.
+This is a Python script to merge multiple pdf files into one. It can merge password protected pdf files also. Tested on Python 3.10.6 on Linux Ubuntu 22.04 LTS (Kernel 5.19.10)
 
 ## Installation
 **Install prerequisite packages**   
