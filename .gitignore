@@ -1,5 +1,5 @@
 # Custom ignore
-MergePDFs/PDFs/*
+managepdf/PDFs/*
 .venv
 
 # Byte-compiled / optimized / DLL files
