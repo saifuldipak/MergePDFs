@@ -15,8 +15,6 @@ with open(input_file, "r") as infile, open(output_file, "w") as outfile:
                 char = '1'
             cleaned_line += char
             
-           # print(cleaned_line, len(cleaned_line))
-
         if len(cleaned_line.strip()) == 11:
             output_line = f'88{cleaned_line}'
             outfile.write(output_line)
