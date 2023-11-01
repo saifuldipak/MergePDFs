@@ -1,12 +1,12 @@
-import PyPDF2
+from PyPDF2 import PdfMerger, PdfReader
 import os
 
 def merge_pdfs(output_path, *input_paths, password=None):
-    merged_pdf = PyPDF2.PdfMerger()
+    merged_pdf = PdfMerger()
     
     for path in input_paths:
         with open(path, 'rb') as pdf_file:
-            reader = PyPDF2.PdfReader(pdf_file, strict=False)
+            reader = PdfReader(pdf_file, strict=False)
             if reader.is_encrypted:
                 reader.decrypt(password)  # Provide the password to decrypt the PDF
             merged_pdf.append(reader)
