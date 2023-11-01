@@ -1,5 +1,5 @@
 ## Description
-This is a Python script to merge multiple pdf files into one. It can merge password protected pdf files also. Tested on Python 3.10.6 on Linux Ubuntu 22.04 LTS (Kernel 5.19.10)
+This is a collection of Python scripts to merge/split pdf files, format contact numbers etc. It can merge password protected pdf files also. Tested on Python >=3.10.6.
 
 ## Installation
 **Install prerequisite packages**   
@@ -28,3 +28,10 @@ This is a Python script to merge multiple pdf files into one. It can merge passw
 
 3. **Split file. Note: it will create a pdf file of each page from the input file**
     `$ python3 split.py`
+
+## Format contact numbers
+This script removes some characters, replace some characters and ignore if its not a number. It takes number from a file and after formatting those numbers, writes to another file.
+
+1. **Set the input and output filepath in the script.**
+2. **Run script**  
+    `$ python3 format_number.py`
