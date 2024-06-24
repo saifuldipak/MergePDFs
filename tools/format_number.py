@@ -1,11 +1,14 @@
 import re
 
-# Define the input and output file paths
-pattern = re.compile('^01')
+# Edit the following variables as required
+INPUT_PREFIX = '^01'
+OUTPUT_PREFIX = '88'
+NUMBER_OF_DIGITS = 11
 INPUT = "input.txt"
 OUTPUT = "output.txt"
 
 # Open the input file for reading and the output file for writing
+input_pattern = re.compile(f"{INPUT_PREFIX}")
 with open(INPUT, "r", encoding='utf-8') as infile, open(OUTPUT, "w", encoding='utf-8') as outfile:
     for line in infile:
         cleaned_line = ''
@@ -18,11 +21,11 @@ with open(INPUT, "r", encoding='utf-8') as infile, open(OUTPUT, "w", encoding='u
                 char = '1'
             cleaned_line += char
             
-        if len(cleaned_line.strip()) != 11:
+        if len(cleaned_line.strip()) != NUMBER_OF_DIGITS:
             continue
         
-        if not pattern.match(cleaned_line):
+        if not input_pattern.match(cleaned_line):
             continue
         
-        output_line = f'88{cleaned_line}'
+        output_line = f"{OUTPUT_PREFIX}{cleaned_line}"
         outfile.write(output_line)
